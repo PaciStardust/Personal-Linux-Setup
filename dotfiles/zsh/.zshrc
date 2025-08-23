@@ -244,8 +244,21 @@ fi
 
 # Shell Integrations (needs to be loaded before fzf-tab)
 # FZF via CtrlR
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+if [ -f /usr/share/fzf/key-bindings.zsh ]; then
+  source /usr/share/fzf/key-bindings.zsh
+elif [ -f /usr/share/fzf/examples/key-bindings.zsh ]; then
+  source /usr/share/fzf/examples/key-bindings.zsh
+else
+  echo "Unable to locate FZF key-bindings.zsh"
+fi
+
+if [ -f /usr/share/fzf/completion.zsh ]; then
+  source /usr/share/fzf/completion.zsh
+elif [ -f /usr/share/fzf/examples/completion.zsh ]; then
+  source /usr/share/fzf/examples/completion.zsh
+else
+  echo "Unable to locate FZF completion.zsh"
+fi
 
 # Theme (Cattpucchin Macchiato, No BG)
 FZF_THEME="\
