@@ -1,6 +1,4 @@
 #!/bin/zsh
-if []
-
 if [ -f "$1" ]; then
     stat "$1" --printf='Type: %F | Size: %s | Access: %A\nGroup: %G(%g) | Owner: %U(%u)\nCreated: %w\nModified: %y\n'
     echo '--------------------------------------------------------------------------------------------------------'
