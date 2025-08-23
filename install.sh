@@ -102,6 +102,9 @@ fi
 if [ ! -d ~/.tmux/plugins/tpm ]; then
     echo "[*] Installing Tmux Plugin Manager (TPM)..."
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else 
+    echo "[*] Updating TPM..."
+    git -C ~/.tmux/plugins/tpm pull --ff-only
 fi
 
 # Install tmux plugins automatically
