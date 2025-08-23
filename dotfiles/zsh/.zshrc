@@ -271,12 +271,13 @@ FZF_DEFAULT_OPTS="--layout reverse --multi ${FZF_THEME}"
 
 # Using FD instead of Find
 FZF_FD_OPTS="--hidden --follow --exclude '.git'"
-FZF_DEFAULT_COMMAND="fdfind ${FZF_FD_OPTS}"
+FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
 FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
 
 # Preview
 FZF_DEFAULT_OPTS+=" --preview '~/.config/functions/fzf-preview.sh {}'"
+FZF_CTRL_R_OPTS="--no-preview"
 
 #----------------#
 # FZF-Tab        #
