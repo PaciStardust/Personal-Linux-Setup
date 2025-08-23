@@ -57,7 +57,7 @@ ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 ln -sf "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
-# Setup Catppuccin for bat TODO: see if this can be changed
+# Setup Catppuccin for bat
 if command -v bat >/dev/null || command -v batcat >/dev/null; then
     echo "[*] Setting up Catppuccin for bat..."
     mkdir -p ~/.config/bat/themes
