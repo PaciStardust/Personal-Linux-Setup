@@ -295,7 +295,7 @@ zstyle ':fzf-tab:complete:*' fzf-min-height 16
 zstyle ':fzf-tab:*' fzf-flags ${FZF_THEME}
 
 # Preview files and directories
-zstyle ':fzf-tab:complete:*' fzf-preview '~/.config/functions/fzf_preview.sh $realpath'
+zstyle ':fzf-tab:complete:*' fzf-preview '~/.config/functions/fzf-preview.sh $realpath'
 
 # Enable TMUX Popup
 # zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
