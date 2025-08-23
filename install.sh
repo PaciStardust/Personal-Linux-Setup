@@ -28,7 +28,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-
 # Install or Update Powerlevel10k if missing
 if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
     echo "[*] Installing Powerlevel10k..."
@@ -111,4 +110,3 @@ echo "[*] Installing TPM plugins..."
 
 echo
 echo "[*] Done! Restart your terminal or log out/in."
-echo "[*] For tmux plugins: open tmux and press Prefix + I (default: Ctrl-b I)."
