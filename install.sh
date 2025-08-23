@@ -69,6 +69,13 @@ else
     git -C "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" pull --ff-only
 fi
 
+# Deploy Folders (symlink)
+FOLDERS_DIR="$(cd "$(dirname "$0")"/folders && pwd)"
+
+echo "[*] Installing folders..."
+mkdir -p "$HOME/.config"
+rm -rf "$HOME/.config/functions"
+ln -snf "$FOLDERS_DIR/functions" "$HOME/.config/functions"
 
 # Deploy dotfiles (symlink)
 DOTFILES_DIR="$(cd "$(dirname "$0")"/dotfiles && pwd)"
