@@ -49,6 +49,27 @@ else
     git -C "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fzf-tab" pull --ff-only
 fi
 
+# Install or Update zsh-autosuggestions
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+    echo "[*] Updating zsh-autosuggestions plugin..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions \
+        "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+else
+    echo "[*] Updating zsh-autosuggestions plugin..."
+    git -C "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" pull --ff-only
+fi
+
+# Install or Update zsh-syntax-highlighting
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+    echo "[*] Updating zsh-syntax-highlighting plugin..."
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+        "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+else
+    echo "[*] Updating zsh-syntax-highlighting plugin..."
+    git -C "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" pull --ff-only
+fi
+
+
 # Deploy dotfiles (symlink)
 DOTFILES_DIR="$(cd "$(dirname "$0")"/dotfiles && pwd)"
 
