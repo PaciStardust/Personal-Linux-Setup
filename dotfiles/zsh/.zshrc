@@ -35,7 +35,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 #----------------#
 
 # Case sensitive completion
-CASE_SENSITIVE="false"
+# CASE_SENSITIVE="true"
 
 # Hyphen-insensitive completion
 # HYPHEN_INSENSITIVE="true"
