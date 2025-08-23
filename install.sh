@@ -75,6 +75,7 @@ echo "[*] Installing folders..."
 mkdir -p "$HOME/.config"
 rm -rf "$HOME/.config/functions"
 ln -snf "$FOLDERS_DIR/functions" "$HOME/.config/functions"
+find "$FOLDERS_DIR/functions" -type f -name "*.sh" -exec chmod u+x {} \;
 
 # Deploy dotfiles (symlink)
 DOTFILES_DIR="$(cd "$(dirname "$0")"/dotfiles && pwd)"
