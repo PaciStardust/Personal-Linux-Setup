@@ -1,0 +1,17 @@
+bat
+cron
+curl
+wget
+docker.io
+docker-compose
+fd-find
+fzf
+git
+htop
+man-db
+manpages
+neovim
+screen
+tmux
+zsh
+zoxide
