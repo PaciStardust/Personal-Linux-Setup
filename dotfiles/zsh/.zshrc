@@ -263,7 +263,7 @@ FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
 
 # Preview
-FZF_DEFAULT_OPTS+=" --preview '~/.config/functions/fzf_preview.sh {}'"
+FZF_DEFAULT_OPTS+=" --preview '~/.config/functions/fzf-preview.sh {}'"
 
 #----------------#
 # FZF-Tab        #
