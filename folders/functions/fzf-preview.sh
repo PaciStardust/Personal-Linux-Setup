@@ -4,7 +4,7 @@ if [ -f "$1" ]; then
     echo '--------------------------------------------------------------------------------------------------------'
     if command -v batcat >/dev/null; then
         batcat "$1" --style=plain --color=always --theme="$BAT_THEME" --line-range=:500
-    elif 
+    else
         bat "$1" --style=plain --color=always --theme="$BAT_THEME" --line-range=:500
     fi
 elif [ -d "$1" ]; then
